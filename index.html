@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+
+</head>
+
+<body>
+    <header>
+        <!-- <section>
+            <img src="" alt="logo">
+        </section> -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Link1</a>
+                </li>
+                <li>
+                    <a href="#">Link2</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="projects">
+            <div class="project-content">
+                <h3>Projects</h3>
+                <ul>
+                    <li>
+                        <a href="#">contet1</a>
+                    </li>
+                    <li>
+                        <a href="#">contet2</a>
+                    </li>
+                    <li>
+                        <a href="#">contet3</a>
+                    </li>
+                    <li>
+                        <a href="#">contet4</a>
+                    </li>
+                    <li>
+                        <a href="#">contet5</a>
+                    </li>
+                    <li>
+                        <a href="#">contet6</a>
+                    </li> <li>
+                        <a href="#">contet7</a>
+                    </li> <li>
+                        <a href="#">contet8</a>
+                    </li>
+    
+                </ul>
+            </div>
+        </section>
+        <section id="about">
+            <section class="about-image">
+                <img src="" alt="Person image">
+            </section>
+            <section>
+                <hgroup>
+
+                    <h1>portfolio user</h1>
+                    <p>I am a passoinate devloper egar to learn and devlop more connection deep within Software
+                        development. <br>"Don’t you want to make dreams a reality?"<br>
+                        "I’m here to help turn your dreams into reality." </p>
+                </hgroup>
+                <button>Connect Me</button>
+                <button>Downlaod resume</button>
+
+            </section>
+        </section>
+        <section id="contact">
+            <form action="" method="post">
+                <label>
+                    <input type="text" placeholder="from">
+                </label>
+                <label>
+                    <input type="text" placeholder="subject">
+                </label>
+
+                <label>
+                    <textarea name="" id="" placeholder="type message"></textarea>
+                </label>
+            </form>
+        </section>
+        </section>
+    </main>
+    <footer>
+        <section>
+            connect me also
+            <ul>
+                <li>
+                    <a href="#">github</a>
+                </li>
+                <li>
+                    <a href="#">linkedin</a>
+                </li>
+                <li>
+                    <a href="#">discord</a>
+                </li>
+                <li>
+                    <a href="#">whatsup</a>
+                </li>
+                <li>
+
+            </ul>
+        </section>
+        <section>
+            goback
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Link1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link2</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <p>&copy;2024 Author. All rights reserved.</p>
+    </footer>
+
+    <template>
+        <style>
+            a {
+                font-size: 2.2em;
+                font-family: Arial, Helvetica, sans-serif;
+                color: coral;
+            }
+
+            dl {
+                border-left: 5px solid yellowgreen;
+                padding-left: 1em;
+            }
+
+            dt {
+                font-weight: bold;
+                font-size: 2em;
+            }
+
+            dd {
+                color: darkslategray;
+                font-size: 1.6em;
+            }
+        </style>
+        <h1>
+            <slot name="heading"></slot>
+        </h1>
+        <dl>
+            <dt>
+                <slot name="parent-1"></slot>
+            </dt>
+            <dd>
+                <slot name="child-1"></slot>
+            </dd>
+            <dt>
+                <slot name="parent-2"></slot>
+            </dt>
+            <dd>
+                <slot name="child-2"></slot>
+            </dd>
+        </dl>
+    </template>
+
+    <section>
+        <span slot="heading">GeeksforGeeks</span>
+        <span slot="parent-1">GFG</span>
+        <span slot="child-1">
+            A computer science portal for geeks
+        </span>
+        <span slot="parent-2">Slot tag</span>
+        <span slot="child-2">
+            Create separate DOM trees and present them together.
+        </span>
+    </section>
+    <dialog open>
+        <form method="dialog">
+            <button type="submit" autofocus>close</button>
+        </form>
+    </dialog>
+    <dialog open>
+        <p>Greetings, one and all!</p>
+        <form method="dialog">
+            <button>OK</button>
+        </form>
+    </dialog>
+
+    <!-- <script>
+        let dlTemplate = document.querySelector('template').content;
+        let sections = document.querySelectorAll('section');
+ 
+        sections.forEach(function (section) {
+            section.attachShadow({ mode: 'open' }).appendChild(
+                dlTemplate.cloneNode(true))
+        });
+    </script> -->
+</body>
+
+</html>
